@@ -33,12 +33,14 @@
         color:    map-get($header, color);
         @include sidebar-slide-animation;
 
+        //Begin TSOC modification
         .header-picture {
             display:       block;
-            width:         30px;
-            height:        30px;
-            border-radius: 15px;
+            width:         85px;
+            height:        40px;
+            //border-radius: 15px;
         }
+        //End TSOC modification
     }
     .header-right-icon {
         position: absolute;
