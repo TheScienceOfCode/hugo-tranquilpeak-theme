@@ -7,9 +7,11 @@
 {{ end }}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!--EXTERNAL SCRIPTS END-->
-<!--SCRIPTS-->
-<script src="/js/tranquilpeak.js"></script>
-<!--SCRIPTS END-->
+<!--SCRIPTS
+ BEGIN TSOC Modification -->
+<script src="{{ "/js/tranquilpeak.js" | absURL }}"></script>
+<!--SCRIPTS END
+ END TSOC Modification -->
 {{ range .Site.Params.customJS }}
   {{ if isset . "src" }}
     <script{{ range $key, $value := . }} {{ if eq $key "src" }}{{ (printf "%s=\"%s\"" $key ($value | absURL)) | safeHTMLAttr }}{{ else if and (in "async defer" $key) }}{{ if $value }}{{ (printf "%s" $key) | safeHTMLAttr }}{{ end }}{{ else }}{{ (printf "%s=\"%s\"" $key (string $value)) | safeHTMLAttr }}{{ end }}{{ end }}></script>
