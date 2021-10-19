@@ -1,4 +1,6 @@
-const {nanoid} = require('nanoid');
+// Begin TSOC fix
+const nanoid = require('nanoid');
+// End TSOC fix
 
 module.exports = function(grunt) {
   grunt.config.set('cssmin', {
