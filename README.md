@@ -1,3 +1,11 @@
+Updated to be used by The Science of Code. Modifications are commented with **Begin TSOC**.
+
+If Git shows copied files as changes, use the following command:
+
+```
+git add --renormalize .
+```
+
 # Tranquilpeak
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/thibaudlepretre.svg?style=social&label=%40thibaudlepretre)](https://twitter.com/intent/follow?screen_name=thibaudlepretre)
