@@ -17,6 +17,10 @@
       }
 
       $('.fancybox').fancybox({
+        /* BEGIN TSOC Modification */
+        loop: true,
+        defaultType: "image",
+        /* END TSOC Modification */
         buttons: [
           'fullScreen',
           'thumbs',
