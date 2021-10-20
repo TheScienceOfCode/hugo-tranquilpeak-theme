@@ -50,6 +50,10 @@
         color:    map-get($header, color);
     }
     .header-title {
+        // BEGIN TSOC Modification
+        font-family: map-get($font-families, 'header');
+        text-transform: uppercase;
+        // END TSOC Modification
         text-align:  center;
         font-size:   $font-size-base;
         line-height: 55px;

@@ -1,4 +1,7 @@
 #footer {
+    /* BEGIN TSOC Modification */
+    font-family:  map-get($font-families, 'footer');
+    /* END TSOC Modification */
     color:      map-get($colors, light);
     font-size:  map-get($font-size, medium);
     text-align: center;
@@ -6,3 +9,9 @@
     height:     auto;
     padding:    20px 20px;
 }
+
+ /* BEGIN TSOC Modification */
+#footer-logo {
+    max-width: 200px;
+}
+/* END TSOC Modification */

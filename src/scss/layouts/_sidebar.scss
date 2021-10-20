@@ -1,6 +1,10 @@
 // Global CSS rules for all screen size
 #sidebar {
     font-family:        map-get($font-families, 'sidebar');
+    // BEGIN TSOC Modification
+    text-transform: uppercase;
+    // END TSOC Modification
+
     height:             100%;
     position:           fixed;
     top:                0;
@@ -94,7 +98,10 @@
         &[data-behavior="1"],
         &[data-behavior="2"],
         &[data-behavior="3"] {
-            @include sidebar-md;
+            // BEGIN TSOC Modification
+            @include sidebar-lg;
+            //@include sidebar-md;
+            // END TSOC
         }
         &[data-behavior="4"],
         &[data-behavior="5"] {

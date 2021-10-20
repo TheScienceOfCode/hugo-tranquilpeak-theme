@@ -6,10 +6,30 @@
     {{ with ($.Scratch.Get "authorPicture") }}
       <img id="about-card-picture" src="{{ . }}{{ if in . "//www.gravatar.com/avatar/" }}?s=110{{ end }}" alt="{{ i18n "global.author_picture" }}" />
     {{ end }}
-    <h4 id="about-card-name">{{ .Site.Author.name }}</h4>
+    <!-- BEGIN TSOC Modification
+    <h4 id="about-card-name">{{ .Site.Author.name }}</h4> 
+    -->
     {{ with .Site.Author.bio }}
       <div id="about-card-bio">{{ . | markdownify }}</div>
     {{ end }}
+    
+    {{ with .Site.Author.github }}
+      <a class="about-card" href="{{ . }}" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-github"></i>
+      </a>
+    {{ end }}
+    {{ with .Site.Author.twitter }}
+      <a class="about-card" href="{{ . }}" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-twitter"></i>
+      </a>
+    {{ end }}
+    {{ with .Site.Author.facebook }}
+      <a class="about-card" href="{{ . }}" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-facebook"></i>
+      </a>
+    {{ end }}
+
+    <!-- 
     {{ with .Site.Author.job }}
       <div id="about-card-job">
         <i class="fa fa-briefcase"></i>
@@ -24,5 +44,6 @@
         {{ . }}
       </div>
     {{ end }}
+    END TSOC Modification  -->
   </div>
 </div>

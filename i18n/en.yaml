@@ -159,4 +159,6 @@
 ## Begin TSOC modification
 - id: "translations.available"
   translation: "Available languages"
+- id: "post.license"
+  translation: "LICENSE"
 ## End TSOC modification

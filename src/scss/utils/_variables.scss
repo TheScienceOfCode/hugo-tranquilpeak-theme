@@ -2,28 +2,29 @@
 // --------------------------------------------
 
 // Font families
-$open-sans:            'Open Sans';
-$open-sans-sans-serif: 'Open Sans', sans-serif;
-$merriweather-serif:   'Merriweather', serif;
-$menlo:                 Menlo, Consolas, monospace;
-
-$font-family-base: $open-sans-sans-serif;
-
+/* BEGIN TSOC MODIFICATION */
+$default-font:          "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+$tsoc-font:             "Prompt";
+$code-font:             Consolas,Menlo,Monaco,"Courier New",monospace;
+$font-family-base:      $default-font;
 $font-families: (
    // base
-   'headings':          $open-sans-sans-serif,
+   'headings':          $default-font,
    // components
-   'code':              $menlo,
-   'caption':           $merriweather-serif,
-   'image-gallery':     $open-sans,
-   'post-header-cover': $merriweather-serif,
-   'post-meta':         $open-sans-sans-serif,
-   'post-content':      $merriweather-serif,
-   'post-excerpt-link': $open-sans-sans-serif,
-   'highlight':         $menlo,
+   'code':              $code-font,
+   'caption':           $default-font,
+   'image-gallery':     $default-font,
+   'post-header-cover': $default-font,
+   'post-meta':         $default-font,
+   'post-content':      $default-font,
+   'post-excerpt-link': $default-font,
+   'highlight':         $default-font,
    // layout
-   'sidebar':           $open-sans-sans-serif
+   'sidebar':           $tsoc-font,
+   'footer':            $default-font,
+   'header':            $tsoc-font
 );
+/* END TSOC MODIFICATION */
 
 // equal to 15px
 $font-size-base:      1.6rem;
@@ -137,7 +138,9 @@ $headings-font-size-md-screen-reduction-factor: 0.15rem;
 
 // Main
 $about: (
-    'background': rgba(17, 26, 35, 0),
+    // BEGIN TSOC Modification
+    'background':       rgba(17, 41, 66, 0.7), 
+    // END TSOC Modification
 );
 
 // Header
@@ -153,7 +156,9 @@ $sidebar: (
     'md-screen-width':  75px,
     'lg-screen-width':  250px,
     'xlg-screen-width': 500px,
-    'background':       rgba(17, 26, 35, 0),
+    // BEGIN TSOC Modification
+    'background':       rgba(17, 41, 66, 0.7), 
+    // END TSOC Modification
     'color':            #ebebeb
 );
 

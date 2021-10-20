@@ -4,6 +4,21 @@
     -webkit-transition:          -webkit-transform .25s ease-in-out;
 }
 
+/* BEGIN TSOC Modification */
+.sidebar-button-icon {
+    font-size:      2rem;
+    font-weight:    600;
+    display:        inline-block;
+    text-align:     center;
+    width:          30px;
+    height:         30px;
+    line-height:    30px;
+    padding-top:    0;
+    vertical-align: middle;    
+    color: rgba(255, 255, 255, 0.5);
+}
+/* END TSOC Modification */
+
 /// Mixin helper to display the sidebar in medium size
 @mixin sidebar-md {
     width: map-get($sidebar, md-screen-width);
@@ -74,6 +89,7 @@
 
         // Begin TSOC modification
         .sidebar-profile-picture {
+            max-width: 150px;
             margin-bottom: 5px;
         }
         // End TSOC modification

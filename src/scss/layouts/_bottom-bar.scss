@@ -42,8 +42,13 @@
         &[data-behavior="1"],
         &[data-behavior="2"],
         &[data-behavior="3"] {
-            @include bottom-bar-md;
-            @include bottom-bar-pushed-md;
+            
+            // BEGIN TSOC Modification
+            @include bottom-bar-sm;
+            @include bottom-bar-pushed-lg;
+            //@include bottom-bar-md;
+            //@include bottom-bar-pushed-md;
+            // END TSOC
         }
         // Display bottom bar in large size and push it from the size of the large sidebar
         &[data-behavior="4"],

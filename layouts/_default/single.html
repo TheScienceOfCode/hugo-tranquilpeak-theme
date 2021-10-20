@@ -26,6 +26,7 @@
               {{ partial "post/gallery.html" . }}
             </div>
           </div>
+         
           <div id="post-footer" class="post-footer main-content-wrap">
             {{ if (not (eq .Params.showTags false)) }}
               {{ with .Params.tags }}
@@ -38,6 +39,11 @@
                 {{ end }}
               {{ end }}
             {{ end }}
+             <!-- Begin TSOC modification -->
+            <div class="post-footer-bottom-line">
+              {{ partial "post/license.html" . }}  
+            </div>
+             <!-- End TSOC modification -->
             {{ partial "post/actions.html" . }}
             {{ partial "post/comment.html" . }}
           </div>

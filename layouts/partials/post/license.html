@@ -1,0 +1,15 @@
+<span class="text-color-light text-small">{{ i18n "post.license" }}:
+{{ with .Params.license }}
+  {{ if eq . "ccby4.0" }}
+    <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-creative-commons-by"></i> CC BY 4.0
+    </a>
+  {{ else if eq . "ccbysa4.0" }}
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-creative-commons-sa"></i> CC BY SA 4.0
+    </a>
+  {{ else }}
+    CC BY
+  {{ end }}  
+{{ end }}
+</span><br/>

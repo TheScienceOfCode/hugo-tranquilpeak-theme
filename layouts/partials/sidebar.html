@@ -3,14 +3,16 @@
     
     <!-- Begin TSOC Logo -->
     <div class="sidebar-profile">
-      <a href="{{ if $.Site.Params.sidebar.profile.url }}{{ $.Site.Params.sidebar.profile.url }}{{ else }}{{ "/#about" }}{{ end }}">
+      <a href="{{ if $.Site.Params.sidebar.profile.url }}{{ $.Site.Params.sidebar.profile.url }}{{ else }}{{ "/" }}{{ end }}">
         <img class="sidebar-profile-picture" src="{{ .Site.Params.tsoc.picture }}" alt="{{ i18n "global.author_picture" }}" />
         <img class="sidebar-profile-picture-small" src="{{ .Site.Params.tsoc.pictureSmall }}" alt="{{ i18n "global.author_picture" }}" />
       </a>
+      <!-- BEGIN TSOC Modification
       <h4 class="sidebar-profile-name">{{ $.Site.Author.name }}</h4>
       {{ with $.Site.Author.bio }}
         <h5 class="sidebar-profile-bio">{{ . | markdownify }}</h5>
       {{ end }}
+      END TSOC Modification-->
     </div>
     <!-- End TSOC Logo -->
 
@@ -19,6 +21,16 @@
     </ul>
     <ul class="sidebar-buttons">
       {{ partial "menu.html" (dict "menu" .Site.Menus.links "root" $) }}
+      <!-- BEGIN TSOC Modification -->
+      {{ range $.Site.Home.AllTranslations }}
+        <li class="sidebar-button">
+          <a class="sidebar-button-link " href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
+            <span class="sidebar-button-icon">&nbsp;</span>
+            <span class="sidebar-button-desc">{{ .Language.LanguageName }}</span>
+          </a>
+        </li>
+      {{ end }}
+      <!-- END TSOC Modification -->
     </ul>
     <ul class="sidebar-buttons">
       {{ partial "menu.html" (dict "menu" .Site.Menus.misc "root" $) }}

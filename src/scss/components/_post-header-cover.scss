@@ -143,7 +143,10 @@
         &[data-behavior="1"],
         &[data-behavior="2"],
         &[data-behavior="3"] {
-            @include post-header-cover-md;
+            // BEGIN TSOC Modification
+            @include post-header-cover-sm;
+            //@include post-header-cover-md;
+            // END TSOC Modification
         }
         // Display post header cover div in large size and push it from the size of the large sidebar
         &[data-behavior="4"],
