@@ -23,7 +23,7 @@ pre.code-highlight > code {
     height: 4rem !important;
     top: 1.5rem !important;
     right: 0.5rem !important;
-    transition: background-color 50ms ease,transform 50ms ease-out
+    transition: background-color 50ms ease,transform 50ms ease-out;
 
     &:hover {
         cursor: pointer;
