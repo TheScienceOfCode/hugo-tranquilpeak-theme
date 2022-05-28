@@ -197,4 +197,12 @@
   translation: "Available languages"
 - id: "post.license"
   translation: "LICENSE"
+- id: "post.comments"
+  translation: "Comments"
+- id: "post.about_article"
+  translation: "About this article"
+- id: "post.author"
+  translation: "WRITTEN BY"
+- id: "post.stats"
+  translation: "Stats"
 ## End TSOC modification
