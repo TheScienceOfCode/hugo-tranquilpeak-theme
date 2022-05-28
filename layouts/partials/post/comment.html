@@ -1,4 +1,18 @@
 {{ if .IsPage }}
+
+  <!-- BEGIN TSOC Modification -->
+  {{ if .Site.Params.comment.utterances.enable }}
+    <script src="https://utteranc.es/client.js"
+      repo="{{.Site.Params.comment.utterances.repo}}"
+      issue-term="{{ .Site.Params.comment.utterances.issueTerm}}"
+      label="{{ .Site.Params.comment.utterances.label}}"
+      theme="{{ .Site.Params.comment.utterances.theme}}"
+      crossorigin="{{ .Site.Params.comment.utterances.crossorigin}}"
+      async>
+    </script>
+  {{ end }}
+  <!-- BEGIN TSOC Modification -->
+
   {{ if and (.Site.Params.comment.disqus.enable) (not (.Site.Config.Privacy.Disqus.Disable)) }}
     <div id="disqus_thread">
       <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
