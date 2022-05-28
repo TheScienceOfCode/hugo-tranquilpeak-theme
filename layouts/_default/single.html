@@ -28,26 +28,32 @@
           </div>
          
           <div id="post-footer" class="post-footer main-content-wrap">
-            {{ if (not (eq .Params.showTags false)) }}
-              {{ with .Params.tags }}
-                {{ $tagsLength := len . }}
-                {{ if gt $tagsLength 0 }}
-                  <div class="post-footer-tags">
-                    <span class="text-color-light text-small">{{ i18n "post.tagged_in" }}</span><br/>
-                    {{ partial "post/tag.html" $ }}
-                  </div>
-                {{ end }}
-              {{ end }}
-            {{ end }}
-             <!-- Begin TSOC modification -->
-            <div class="post-footer-bottom-line">
-              {{ partial "post/license.html" . }}  
+            
+              <!-- Begin TSOC modification -->
+              <hr />
+              <h2>{{ i18n "post.comments" }}</h2>
+              {{ partial "post/comment.html" . }}
+
+              <hr />
+              <h2>{{ i18n "post.about_article" }}</h2>
+                {{ partial "post/author.html" . }}
+                {{ partial "post/license.html" . }}
+                {{ partial "post/tags.html" . }}
+              
+              <hr />
+              <h2>{{ i18n "post.stats" }}</h2>
+              <div class="post-footer-bottom-line"> 
+                {{ partial "post/stats.html" . }}
+                <br />
+                {{  .Site.Params.statsText }}
+              </div>
+
+              {{ partial "post/actions.html" . }}
+
+              <!-- End TSOC modification -->
+              
             </div>
-             <!-- End TSOC modification -->
-            {{ partial "post/actions.html" . }}
-            {{ partial "post/comment.html" . }}
-          </div>
-        </article>
+          </article>
         {{ partial "footer.html" . }}
       </div>
       <div id="bottom-bar" class="post-bottom-bar" data-behavior="{{ .Scratch.Get "sidebarBehavior" }}">
