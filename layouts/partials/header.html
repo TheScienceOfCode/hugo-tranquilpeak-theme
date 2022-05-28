@@ -14,11 +14,17 @@
     {{ if .icon }}
       <i class="fa fa-lg fa-{{ .icon }}"></i>
     {{ end }}
+    <!-- BEGIN TSOC MODIFICATION -->
     {{ if not $.Site.Params.header.rightLink.icon }}
-      {{ with ($.Scratch.Get "authorPicture") }}
-        <img class="header-picture" src="{{ . }}{{ if in . "//www.gravatar.com/avatar/" }}?s=90{{ end }}" alt="{{ i18n "global.author_picture" }}" />
-      {{ end }}
+      {{ if $.Site.Params.header.rightLink.iconUrl }}
+        <img class="img-fluid" src="{{ $.Site.Params.header.rightLink.iconUrl }}" alt="{{ i18n "global.author_picture" }}" />
+      {{ else }}
+        {{ with ($.Scratch.Get "authorPicture") }}
+          <img class="header-picture" src="{{ . }}{{ if in . "//www.gravatar.com/avatar/" }}?s=90{{ end }}" alt="{{ i18n "global.author_picture" }}" />
+        {{ end }}
+      {{ end}}
     {{ end }}
+    <!-- END TSOC MODIFICATION -->
     </a>
   {{ end }}
 </header>

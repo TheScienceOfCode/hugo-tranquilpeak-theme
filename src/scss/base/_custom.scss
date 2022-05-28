@@ -15,6 +15,11 @@ pre.code-highlight > code {
 
 
 // BEGIN TSOC Modification
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
 .hljs-copy-button {
     background-color: #b1b9be !important;
     border-color: #b1b9be !important;
