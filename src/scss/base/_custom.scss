@@ -20,8 +20,13 @@ pre.code-highlight > code {
 }
 
 .img-fluid {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.logo-navbar {
+  max-height: map-get($header, height);
+  padding: 2px;
 }
 
 .hljs-copy-button {

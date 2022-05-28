@@ -1,8 +1,10 @@
+// BEGIN TSOC Modification
 #header {
     display:                     block;
     width:                       100%;
     height:                      map-get($header, height);
     background:                  map-get($header, background);
+    box-shadow:                      map-get($header, shadow);
     position:                    fixed;
     top:                         0;
     border:                      map-get($header, border);
@@ -22,25 +24,15 @@
         left:     20px;
         cursor:   pointer;
     }
+    
     .header-right-picture {
         position: absolute;
         // vertical center
-        top:      12.5px;
+        top:      2px;
         right:    20px;
         display:  block;
-        width:    30px;
-        height:   30px;
         color:    map-get($header, color);
         @include sidebar-slide-animation;
-
-        //Begin TSOC modification
-        .header-picture {
-            display:       block;
-            width:         85px;
-            height:        40px;
-            //border-radius: 15px;
-        }
-        //End TSOC modification
     }
     .header-right-icon {
         position: absolute;
@@ -50,10 +42,8 @@
         color:    map-get($header, color);
     }
     .header-title {
-        // BEGIN TSOC Modification
         font-family: map-get($font-families, 'header');
         text-transform: uppercase;
-        // END TSOC Modification
         text-align:  center;
         font-size:   $font-size-base;
         line-height: 55px;
@@ -122,3 +112,5 @@
         display: none;
     }
 }
+
+// END TSOC Modification
