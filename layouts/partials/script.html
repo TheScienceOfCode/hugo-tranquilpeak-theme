@@ -10,6 +10,12 @@
 <!--SCRIPTS
  BEGIN TSOC Modification -->
 <script src="{{ "/js/tranquilpeak.js" | absURL }}"></script>
+
+{{ if .Site.Params.enableHljsCopy }}
+  <script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css" />
+{{ end }}
+
 <!--SCRIPTS END
  END TSOC Modification -->
 {{ range .Site.Params.customJS }}
@@ -22,6 +28,11 @@
 {{ if eq .Site.Params.syntaxHighlighter "highlight.js" }}
 <script>
 $(document).ready(function() {
+  /* BEGIN TSOC Modification */
+  {{ if .Site.Params.enableHljsCopy }}
+  hljs.addPlugin(new CopyButtonPlugin());
+  {{ end }}
+  /* END TSOC Modification */
   hljs.configure({ classPrefix: '', useBR: false });
   $('pre.code-highlight > code, pre > code').each(function(i, block) {
     if (!$(this).hasClass('codeblock')) {

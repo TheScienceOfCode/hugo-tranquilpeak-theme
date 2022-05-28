@@ -1,51 +1,135 @@
+// BEGIN TSOC MODIFICATION
 // Highlight.js custom theme
-// Follow guidelines
-// 1. Uncomment the block just below - remove `/*` and `*/`
-// 2. Fill `background`, `color`, `border-right-color` properties
-// with properties of `.hljs` CSS class of your theme
-// 3. Put your theme where it's indicated just below
-// 4. Remove `.hljs {...}` rules
-// 5. Remove `hljs-` of all CSS class name. E.g : `.hljs-comment` becomes `.comment`
-// 6. Comment line 61 (`'themes/tranquilpeak',`) of `source/_css/tranquilpeak.scss` file
-// 7. Run `grunt buildProd` to build the theme and see the result
-/*
-// Default code block
-pre > code {
-    background: ;
-    color: ;
-}
+// 
+// Copy a theme and replace "hljs-" with "" (nothing). 
+// https://github.com/highlightjs/highlight.js/tree/main/src/styles
 
-// Default inline code
-code {
-    background-color: ;
-}
+/*!
+  
 
-// Tabbed code block tab
-// If your theme is dark then use a lighter background
-// to see clearly which tab is active
-.codeblock--tabbed figcaption .tab.active {
-    background: ;
-    color: ;
-}
+  Theme: GitHub
+  Description: Light theme as seen on github.com
+  Author: github.com
+  Maintainer: @Hirse
+  Updated: 2021-05-15
 
-// highlight code block
-figure.highlight,
-.codeblock {
-    background: ;
-    color: ;
-
-    figcaption {
-        background: ;
-        color: ;
-    }
-    .gutter {
-        background: ;
-        border-right-color: ;
-        .line {
-            color: ;
-        }
-    }
-    // PUT YOUR THEME HERE
-
-}
+  Outdated base version: https://github.com/primer/github-syntax-light
+  Current colors taken from GitHub's CSS
 */
+
+.hljs {
+    color: #24292e;
+    /*background: #ffffff;*/
+  }
+  
+  .doctag,
+  .keyword,
+  .meta .keyword,
+  .template-tag,
+  .template-variable,
+  .type,
+  .variable.language_ {
+    /* prettylights-syntax-keyword */
+    color: #d73a49;
+  }
+  
+  .title,
+  .title.class_,
+  .title.class_.inherited__,
+  .title.function_ {
+    /* prettylights-syntax-entity */
+    color: #6f42c1;
+  }
+  
+  .attr,
+  .attribute,
+  .literal,
+  .meta,
+  .number,
+  .operator,
+  .variable,
+  .selector-attr,
+  .selector-class,
+  .selector-id {
+    /* prettylights-syntax-constant */
+    color: #005cc5;
+  }
+  
+  .regexp,
+  .string,
+  .meta .string {
+    /* prettylights-syntax-string */
+    color: #032f62;
+  }
+  
+  .built_in,
+  .symbol {
+    /* prettylights-syntax-variable */
+    color: #e36209;
+  }
+  
+  .comment,
+  .code,
+  .formula {
+    /* prettylights-syntax-comment */
+    color: #6a737d;
+  }
+  
+  .name,
+  .quote,
+  .selector-tag,
+  .selector-pseudo {
+    /* prettylights-syntax-entity-tag */
+    color: #22863a;
+  }
+  
+  .subst {
+    /* prettylights-syntax-storage-modifier-import */
+    color: #24292e;
+  }
+  
+  .section {
+    /* prettylights-syntax-markup-heading */
+    color: #005cc5;
+    font-weight: bold;
+  }
+  
+  .bullet {
+    /* prettylights-syntax-markup-list */
+    color: #735c0f;
+  }
+  
+  .emphasis {
+    /* prettylights-syntax-markup-italic */
+    color: #24292e;
+    font-style: italic;
+  }
+  
+  .strong {
+    /* prettylights-syntax-markup-bold */
+    color: #24292e;
+    font-weight: bold;
+  }
+  
+  .addition {
+    /* prettylights-syntax-markup-inserted */
+    color: #22863a;
+    background-color: #f0fff4;
+  }
+  
+  .deletion {
+    /* prettylights-syntax-markup-deleted */
+    color: #b31d28;
+    background-color: #ffeef0;
+  }
+  
+  .char.escape_,
+  .link,
+  .params,
+  .property,
+  .punctuation,
+  .tag {
+    /* purposely ignored */
+  }
+
+// END TSOC MODIFICATION
