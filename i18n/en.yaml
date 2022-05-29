@@ -205,4 +205,8 @@
   translation: "WRITTEN BY"
 - id: "post.stats"
   translation: "Stats"
+- id: "global.category_results"
+  translation: "Articles by category"
+- id: "global.tag_results"
+  translation: "Articles with tag"
 ## End TSOC modification

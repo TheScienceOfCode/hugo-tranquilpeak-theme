@@ -204,4 +204,8 @@
   translation: "ESCRITO POR"
 - id: "post.stats"
   translation: "Estadísticas"
+- id: "global.category_results"
+  translation: "Artículos por categoría"
+- id: "global.tag_results"
+  translation: "Artículos con etiqueta"
 ## End TSOC modification

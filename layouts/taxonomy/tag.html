@@ -12,6 +12,15 @@
                {{ with .Params.coverCaption }}hasCoverCaption{{ end }}">
         {{ if or (not (isset .Site.Params "tagPagination")) (.Site.Params.tagPagination) }}
           <section class="postShorten-group main-content-wrap">
+
+            <!-- BEGIN TSOC MODIFICATION -->
+            <h1 class="list-results">
+              <span>{{ i18n "global.tag_results"}}</span><br />
+              {{ $.Param "Title"  }}
+            </h1>
+            <hr />
+            <!-- END TSOC MODIFICATION -->
+
             {{ $paginator := .Paginate (where .Data.Pages "Type" "in" site.Params.mainSections) }}
             {{ range $paginator.Pages }}
               {{ .Render "summary" }}

@@ -24,6 +24,15 @@ pre.code-highlight > code {
   height: auto;
 }
 
+.list-results {
+  text-transform: uppercase;
+}
+
+.list-results > span {
+  text-transform: none;
+  font-size: 1.8rem;
+}
+
 .logo-navbar {
   max-height: map-get($header, height);
   padding: 2px;
