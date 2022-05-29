@@ -21,7 +21,7 @@
             <hr />
             <!-- END TSOC MODIFICATION -->
 
-            {{ $paginator := .Paginate (where .Data.Pages "Type" "in" site.Params.mainSections) }}
+            {{ $paginator := .Paginate (where .Data.Pages "Type" "in" site.Params.mainSections) .Site.Params.Paginate }}
             {{ range $paginator.Pages }}
               {{ .Render "summary" }}
             {{ end }}
