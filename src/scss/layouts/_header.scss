@@ -33,6 +33,14 @@
         display:  block;
         color:    map-get($header, color);
         @include sidebar-slide-animation;
+
+        // Begin TSOC modification
+        @media #{$small-and-down} {
+          &.pushed {
+            display: none;
+          }
+        }
+        // End TSOC modification
     }
     .header-right-icon {
         position: absolute;

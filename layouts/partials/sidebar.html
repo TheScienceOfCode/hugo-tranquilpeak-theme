@@ -5,7 +5,6 @@
     <div class="sidebar-profile">
       <a href="{{ if $.Site.Params.sidebar.profile.url }}{{ $.Site.Params.sidebar.profile.url }}{{ else }}{{ "/" }}{{ end }}">
         <img class="sidebar-profile-picture" src="{{ .Site.Params.tsoc.picture }}" alt="{{ i18n "global.author_picture" }}" />
-        <img class="sidebar-profile-picture-small" src="{{ .Site.Params.tsoc.pictureSmall }}" alt="{{ i18n "global.author_picture" }}" />
       </a>
       <!-- BEGIN TSOC Modification
       <h4 class="sidebar-profile-name">{{ $.Site.Author.name }}</h4>

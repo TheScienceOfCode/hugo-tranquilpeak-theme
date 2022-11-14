@@ -33,11 +33,6 @@
             display: block;
             margin:  0 auto;
         }
-        // Begin TSOC modification
-        .sidebar-profile-picture-small {
-            display: none;
-        }
-        // End TSOC modification
         .sidebar-profile-name {
             font-size: 1.1em;
             color:     map-get($sidebar, color);
@@ -90,6 +85,15 @@
             left: -#{map-get($sidebar, md-screen-width)};
             @include sidebar-md;
         }
+
+        // Begin TSOC modification
+        .sidebar-profile {
+          height: auto !important;
+          padding-bottom: 0 !important; 
+          padding-top: 18px !important;
+          margin-bottom: 0 !important;
+        }
+        // End TSOC modification
     }
 }
 
