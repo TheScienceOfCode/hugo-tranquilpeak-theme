@@ -3,6 +3,7 @@
     font-family:        map-get($font-families, 'sidebar');
     // BEGIN TSOC Modification
     text-transform: uppercase;
+    backdrop-filter: blur(10px);
     // END TSOC Modification
 
     height:             100%;
