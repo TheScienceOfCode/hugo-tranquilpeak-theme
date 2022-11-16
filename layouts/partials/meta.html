@@ -68,7 +68,10 @@
   <meta property="og:image" content="{{ . | absURL }}">
   <meta property="twitter:image" content="{{ . | absURL }}">
 {{ end }}
-{{ with .Params.thumbnailImage }}
-  <meta property="og:image" content="{{ . | absURL }}">
-  <meta property="twitter:image" content="{{ . | absURL }}">
+{{ if .Params.thumbnailImage }}
+  <meta property="og:image" content="{{ .Params.thumbnailImage | absURL }}">
+  <meta property="twitter:image" content="{{ .Params.thumbnailImage | absURL }}">
+{{ else }}
+  <meta property="og:image" content="{{ .Site.Params.defaultThumbnail | absURL }}">
+  <meta property="twitter:image" content="{{ .Site.Params.defaultThumbnail | absURL }}">
 {{ end }}
