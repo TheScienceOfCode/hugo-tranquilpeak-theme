@@ -41,12 +41,12 @@
 
 <meta name="twitter:card" content="summary">
 {{ with .Site.Author.twitter }}
-  <meta name="twitter:site" content="@{{ . }}">
+  <meta name="twitter:site" content="{{ . }}">
 {{ end }}
 {{ if .Params.twitter }}
-  <meta name="twitter:creator" content="@{{ .Params.twitter }}">
+  <meta name="twitter:creator" content="{{ .Params.twitter }}">
 {{ else if .Site.Author.twitter }}
-  <meta name="twitter:creator" content="@{{ .Site.Author.twitter }}">
+  <meta name="twitter:creator" content="{{ .Site.Author.twitter }}">
 {{ end }}
 
 {{ with .Site.Params.fbAppId }}
