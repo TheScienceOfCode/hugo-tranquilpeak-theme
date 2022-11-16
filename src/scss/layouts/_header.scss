@@ -10,7 +10,7 @@
     color:                       map-get($header, color);
     // used to animate the header on small screen with javascript
     //@include prefix(transition, top 0.25s ease-in-out, 'webkit' 'moz' 'ms' 'o');
-    top:                         4px;
+    top:                         0;
     z-index:                     map-get($z-indexes, l-header);
     @include sidebar-slide-animation;
     // Eliminate any flickering of elements while they are in a state of being animated
