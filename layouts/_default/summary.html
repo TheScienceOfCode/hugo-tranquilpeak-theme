@@ -74,7 +74,15 @@
   {{ if and (.Scratch.Get "thumbnailImage") (ne (.Scratch.Get "thumbnailImagePosition") "top")}}
     <a href="{{ .Permalink }}" aria-label="{{ if i18n "global.open_post" }}{{ i18n "global.open_post" }}: {{ .Title }}{{ end }}">
       <div class="postShorten-thumbnailimg">
+        <!-- BEGIN TSOC MODIFICATION -->
+        {{ if (.Params.autoThumbnail) }}
+        <div class="thumbnail" style="{{ .Params.autoThumbnailStyle | safeCSS }}">
+          {{ .Params.autoThumbnailText | safeHTML }}
+        </div>
+        {{ else }}
         <img alt="" src="{{ .Scratch.Get "thumbnailImage" }}"/>
+        {{ end }}
+        <!-- END TSOC MODIFICATION -->
       </div>
     </a>
   {{ end }}

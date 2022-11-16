@@ -1,4 +1,16 @@
-{{ if .Params.coverimage }}
+<!-- BEGIN TSOC MODIFICATION -->
+{{ if .Params.coverStyle }}
+  <div class="post-header-cover
+              {{ if .Params.metaalignment }}text-{{ .Params.metaalignment }}{{ else }}text-left{{ end }}
+              {{ with .Params.coversize }}post-header-cover--{{ . }}{{ end }}"
+       style="{{ .Params.coverStyle | safeCSS }}"
+       data-behavior="{{ $.Scratch.Get "sidebarBehavior" }}">
+    {{ if or (eq .Params.covermeta "in") (not .Params.covermeta) }}
+      {{ partial "post/header.html" . }}
+    {{ end }}
+  </div>
+<!-- END TSOC MODIFICAITON -->
+{{ else if .Params.coverimage }}
   <div class="post-header-cover
               {{ if .Params.metaalignment }}text-{{ .Params.metaalignment }}{{ else }}text-left{{ end }}
               {{ with .Params.coversize }}post-header-cover--{{ . }}{{ end }}"

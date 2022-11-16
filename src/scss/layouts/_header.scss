@@ -4,13 +4,13 @@
     width:                       100%;
     height:                      map-get($header, height);
     background:                  map-get($header, background);
-    box-shadow:                      map-get($header, shadow);
+    box-shadow:                  map-get($header, shadow);
     position:                    fixed;
-    top:                         0;
     border:                      map-get($header, border);
     color:                       map-get($header, color);
     // used to animate the header on small screen with javascript
     //@include prefix(transition, top 0.25s ease-in-out, 'webkit' 'moz' 'ms' 'o');
+    top:                         4px;
     z-index:                     map-get($z-indexes, l-header);
     @include sidebar-slide-animation;
     // Eliminate any flickering of elements while they are in a state of being animated

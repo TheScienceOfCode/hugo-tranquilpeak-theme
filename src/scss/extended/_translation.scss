@@ -1,5 +1,7 @@
 .translation-block {
-  border-bottom: solid 1px map-get($colors, lighter);
-  padding: 15px;
+  padding-bottom: 20px;
   text-align: right;
+  small, a {
+    color: map-get($colors, light);
+  }
 }

@@ -15,6 +15,55 @@ pre.code-highlight > code {
 
 
 // BEGIN TSOC Modification
+#top > div > div > p:first-of-type {
+  color: map-get($colors, light);
+  border-bottom: 1px dashed map-get($colors, light);
+}
+
+#top > div > div > p:nth-of-type(2)::first-letter {
+  float: left;
+  font-size: 600%;
+  border: 1px dashed map-get($colors, light);
+  margin-right: 4px;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+.post-title, .postShorten-title {
+  font-family: 'Roboto Condensed';
+  font-weight: 400;
+}
+#top-detail {
+  z-index: 1000000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  border-top: 4px solid;
+  border-image-source: linear-gradient(90deg, #e73c29, #fcd430);
+  border-image-slice: 1;
+}
+
+.thumbnail {
+  min-width: 140px;
+  min-height: 140px;
+  width: 140px;
+  height: 140px;
+  font-size: 64px;
+  font-family: $tsoc-font;
+  background-color: #b1b9be;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &-post-header {
+    float: right;
+  }
+}
+
 .btn-badge {
   display: inline-block;
 }

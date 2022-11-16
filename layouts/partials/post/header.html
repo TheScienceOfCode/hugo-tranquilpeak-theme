@@ -6,9 +6,17 @@
       </a>
     </h1>
   {{ else }}
-    <h1 class="post-title">
-      {{ $.Title }}
+    <!-- BEGIN TSOC MODIFICATION -->
+    <h1 class="post-title {{ if $.Params.autoThumbnail }}post-title-thumbnail{{ end }}">
+      {{ .Params.titleHtml | safeHTML }}
     </h1>
+    {{ if (.Params.autoThumbnail) }}
+      <div class="thumbnail thumbnail-post-header" style="{{ .Params.autoThumbnailStyle | safeCSS }}">
+        {{ .Params.autoThumbnailText | safeHTML }}
+      </div>
+    {{ end }}
   {{ end }}
+  <div class="break"></div>
+  <!-- END TSOC MODIFICATION -->
   {{ partial "post/meta.html" . }}
 </div>
