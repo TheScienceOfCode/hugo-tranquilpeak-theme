@@ -55,6 +55,14 @@
             position:       relative;
             top:            -30px;
         }
+        .post-meta-white {
+            &, & a {
+                color: #fff;
+            }
+            a {
+                font-weight: bold;
+            }
+        }
     }
 }
 // End TSOC modification
