@@ -1,12 +1,8 @@
-{{ with .Site.Params.coverImage }}
-  {{ if (in . "://") }}
-    <div id="cover" style="background-image:url('{{ . | absURL }}');"></div>
-  {{ else }}
-    {{ if (fileExists (printf "static/images/%s" .)) }}
-      {{ $cover := (printf "/images/%s" .) }}
-      <div id="cover" style="background-image:url('{{ $cover | absURL }}');"></div>
-    {{ else }}
-      <div id="cover" style="background-image:url('{{ . | absURL }}');"></div>
-    {{ end }}
+{{ if .Site.Params.coverImage }}
+  {{ $cover := .Site.Params.coverImage }}
+  {{ if not (in .Site.Params.coverImage "://") }}  
+    {{ $cover := (printf "/images/%s" .Site.Params.coverImage) }}    
   {{ end }}
+  <div id="cover" style="background-image:url('{{ $cover | absURL }}'); background-color: {{ .Site.Params.coverBgColor }}">
+  </div>
 {{ end }}
