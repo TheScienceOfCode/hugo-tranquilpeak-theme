@@ -82,11 +82,16 @@
 @media #{$xsmall-and-down} {
     .postShorten {
         .postShorten-thumbnailimg {
-            display: none;
-
-            img {
-                display: none;
+            // BEGIN TSOC MODIFICATION
+            display: flex;
+            justify-content: center;
+            div {
+              margin-bottom: 20px;
+              &:hover {
+                text-decoration: none;
+              }
             }
+            // END TSOC MODIFICATION
         }
     }
 }
