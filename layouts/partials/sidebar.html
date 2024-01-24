@@ -4,7 +4,7 @@
     
     <!-- Begin TSOC Logo -->
     <div class="sidebar-profile">
-      <a href="{{ if $.Site.Params.sidebar.profile.url }}{{ $.Site.Params.sidebar.profile.url }}{{ else }}{{ "/" }}{{ end }}">
+      <a href="{{ site.Home.Permalink }}">
         <img class="sidebar-profile-picture" src="{{ .Site.Params.tsoc.picture }}" alt="{{ i18n "global.author_picture" }}" />
       </a>
     </div>
