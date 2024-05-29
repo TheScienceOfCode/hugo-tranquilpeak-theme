@@ -3,7 +3,7 @@
 
 // Font families
 /* BEGIN TSOC MODIFICATION */
-$default-font:          "Roboto Slab","Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+$default-font:          "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
 $tsoc-font:             "Prompt";
 $headings-font:         "Roboto Condensed", Impact, "Roboto Slab","Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
 $code-font:             Consolas,Menlo,Monaco,"Courier New",monospace;
@@ -27,12 +27,12 @@ $font-families: (
 );
 /* END TSOC MODIFICATION */
 
-// equal to 15px
-$font-size-base:      1.6rem;
 // Begin TSOC modification
-$font-color-base:     #2b2b2b;
+$font-size-base:        1.6rem;
+$font-size-content-big: 1.7rem;
+$font-color-base:       #2b2b2b;
+$line-height-base:      2.0em;
 // End TSOC modification
-$line-height-base:    1.9em;
 $letter-spacing-base: 0.01em;
 
 // Reduction of font size base on small screen and down
