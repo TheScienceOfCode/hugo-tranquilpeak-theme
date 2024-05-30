@@ -4,7 +4,6 @@
 // Font families
 /* BEGIN TSOC MODIFICATION */
 $default-font:          "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
-$tsoc-font:             "Prompt";
 $headings-font:         "Roboto Condensed", Impact, "Roboto Slab","Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
 $code-font:             Consolas,Menlo,Monaco,"Courier New",monospace;
 $font-family-base:      $default-font;
@@ -21,9 +20,9 @@ $font-families: (
    'post-excerpt-link': $default-font,
    'highlight':         $default-font,
    // layout
-   'sidebar':           $tsoc-font,
-   'footer':            $default-font,
-   'header':            $tsoc-font
+   'sidebar':           $headings-font,
+   'footer':            $headings-font,
+   'header':            $headings-font
 );
 /* END TSOC MODIFICATION */
 
