@@ -1,3 +1,9 @@
+// BEGIN TSOC MODIFICATION
+
+#cover {
+  display: none;
+}
+/* DISABLED COVER IMAGE
 #cover {
     position:          fixed;
     width:             100%;
@@ -9,3 +15,6 @@
     // position the cover below the whole blog
     z-index:           map-get($z-indexes, l-cover);
 }
+*/
+
+// END TSOC MODIFICATION
