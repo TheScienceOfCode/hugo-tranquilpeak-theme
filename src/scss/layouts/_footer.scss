@@ -1,8 +1,9 @@
 #footer {
     /* BEGIN TSOC Modification */
     font-family:  map-get($font-families, 'footer');
-    /* END TSOC Modification */
-    color:      map-get($colors, light);
+    background-color: rgb(20,20,20);
+    color:      #fff;
+    /* END TSOC Modification */    
     font-size:  map-get($font-size, medium);
     text-align: center;
     margin-top: 70px;
