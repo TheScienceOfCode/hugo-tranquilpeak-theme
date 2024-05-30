@@ -16,7 +16,10 @@ body {
     height:         100%;
     margin:         0;
     padding:        0;
-    background:     white;
+    // BEGIN TSOC MODIFICATION
+    background-color: rgb(38, 37, 37);
+    // background:     white;
+    // END TSOC MODIFICATION
     font-family:    $font-family-base;
     font-size:      map-get($font-size, base);
     line-height:    $line-height-base;
