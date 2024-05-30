@@ -12,11 +12,12 @@
     padding: 10px;
     text-align: left;
     width: 200px;
-    background-color: rgba(7, 16, 54, 0.25);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(113, 109, 103);
+    border: 1px solid rgb(137, 134, 129);
+    border-radius: 0.5rem;
 
     .sidebar-button-icon {   
-      color: rgba(255, 255, 255, 0.5);
+      color: rgb(235, 233, 215);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -36,14 +37,8 @@
     }
 
     &:hover {
-      background-color: #fff;
+      background-color: rgb(71, 67, 62);
       text-decoration: none;
-      .sidebar-button-icon {
-        color: rgb(21, 21, 21);
-      }
-      .sidebar-button-desc {
-        color: #000;
-      }
     }
   }
 }
