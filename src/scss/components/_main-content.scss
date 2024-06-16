@@ -5,3 +5,9 @@
     padding-right: map-get($main-content, padding-right-left);
     padding-left:  map-get($main-content, padding-right-left);
 }
+
+// BEGIN TSOC MODIFICATION
+.full-h {
+  min-height:    calc(100vh - 250px);
+}
+// END TSOC MODIFICATION
