@@ -36,17 +36,11 @@
 
               <hr />
               <h2>{{ i18n "post.about_article" }}</h2>
+              <div class="post-footer-bottom-line">
                 {{ partial "post/author.html" . }}
                 {{ partial "post/license.html" . }}
                 {{ partial "post/tags.html" . }}
-              
-              <hr />
-              <h2>{{ i18n "post.stats" }}</h2>
-              <div class="post-footer-bottom-line"> 
-                {{ partial "post/stats.html" . }}
-                <br />
-                {{  .Site.Params.statsText }}
-              </div>
+              </div>              
 
               {{ partial "post/actions.html" . }}
 
